@@ -4,12 +4,13 @@
 #
 Name     : libtracefs
 Version  : 1.2.0
-Release  : 1
+Release  : 2
 URL      : https://git.kernel.org/pub/scm/libs/libtrace/libtracefs.git/snapshot/libtracefs-1.2.0.tar.gz
 Source0  : https://git.kernel.org/pub/scm/libs/libtrace/libtracefs.git/snapshot/libtracefs-1.2.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.0
+Requires: libtracefs-lib = %{version}-%{release}
 BuildRequires : libtraceevent-dev
 BuildRequires : trace-cmd-dev
 
@@ -20,11 +21,20 @@ https://git.kernel.org/pub/scm/libs/libtrace/libtracefs.git/
 %package dev
 Summary: dev components for the libtracefs package.
 Group: Development
+Requires: libtracefs-lib = %{version}-%{release}
 Provides: libtracefs-devel = %{version}-%{release}
 Requires: libtracefs = %{version}-%{release}
 
 %description dev
 dev components for the libtracefs package.
+
+
+%package lib
+Summary: lib components for the libtracefs package.
+Group: Libraries
+
+%description lib
+lib components for the libtracefs package.
 
 
 %prep
@@ -36,7 +46,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1621363975
+export SOURCE_DATE_EPOCH=1621364788
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -49,16 +59,20 @@ make  %{?_smp_mflags}
 
 
 %install
-export SOURCE_DATE_EPOCH=1621363975
+export SOURCE_DATE_EPOCH=1621364788
 rm -rf %{buildroot}
-%make_install
-## install_append content
-%make_install install_libs
-## install_append end
+%make_install prefix=/usr libdir=/usr/lib64 install_libs
 
 %files
 %defattr(-,root,root,-)
 
 %files dev
 %defattr(-,root,root,-)
+/usr/include/tracefs/tracefs.h
+/usr/lib64/libtracefs.so
 /usr/lib64/pkgconfig/libtracefs.pc
+
+%files lib
+%defattr(-,root,root,-)
+/usr/lib64/libtracefs.so.1
+/usr/lib64/libtracefs.so.1.2.0
