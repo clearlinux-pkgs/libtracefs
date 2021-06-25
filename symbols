@@ -35,7 +35,7 @@ libtracefs.so.1:tracefs_list_free
 libtracefs.so.1:tracefs_load_cmdlines
 libtracefs.so.1:tracefs_local_events
 libtracefs.so.1:tracefs_local_events_system
-libtracefs.so.1:tracefs_option_diasble
+libtracefs.so.1:tracefs_option_disable
 libtracefs.so.1:tracefs_option_enable
 libtracefs.so.1:tracefs_option_id
 libtracefs.so.1:tracefs_option_is_enabled
