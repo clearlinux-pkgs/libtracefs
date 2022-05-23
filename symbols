@@ -3,6 +3,7 @@ libtracefs.so.1:read_next_record
 libtracefs.so.1:tracefs_binary_close
 libtracefs.so.1:tracefs_binary_init
 libtracefs.so.1:tracefs_binary_write
+libtracefs.so.1:tracefs_debug_dir
 libtracefs.so.1:tracefs_dir_exists
 libtracefs.so.1:tracefs_dynevent_create
 libtracefs.so.1:tracefs_dynevent_destroy
@@ -144,6 +145,8 @@ libtracefs.so.1:tracefs_tracer_clear
 libtracefs.so.1:tracefs_tracer_set
 libtracefs.so.1:tracefs_tracers
 libtracefs.so.1:tracefs_tracing_dir
+libtracefs.so.1:tracefs_uprobe_alloc
+libtracefs.so.1:tracefs_uretprobe_alloc
 libtracefs.so.1:tracefs_vprintf
 libtracefs.so.1:tracefs_warning
 libtracefs.so.1:write_tracer
