@@ -4,7 +4,7 @@
 #
 Name     : libtracefs
 Version  : 1.4.0
-Release  : 11
+Release  : 12
 URL      : https://git.kernel.org/pub/scm/libs/libtrace/libtracefs.git/snapshot/libtracefs-1.4.0.tar.gz
 Source0  : https://git.kernel.org/pub/scm/libs/libtrace/libtracefs.git/snapshot/libtracefs-1.4.0.tar.gz
 Summary  : No detailed summary available
@@ -46,7 +46,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1653337467
+export SOURCE_DATE_EPOCH=1653337770
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -55,11 +55,11 @@ export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
 export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
 export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
-make  %{?_smp_mflags}
+make
 
 
 %install
-export SOURCE_DATE_EPOCH=1653337467
+export SOURCE_DATE_EPOCH=1653337770
 rm -rf %{buildroot}
 %make_install prefix=/usr libdir=/usr/lib64 install_libs
 
