@@ -94,15 +94,18 @@ libtracefs.so.1:tracefs_instance_get_file
 libtracefs.so.1:tracefs_instance_get_name
 libtracefs.so.1:tracefs_instance_get_trace_dir
 libtracefs.so.1:tracefs_instance_is_new
+libtracefs.so.1:tracefs_instance_reset
 libtracefs.so.1:tracefs_instance_set_affinity
 libtracefs.so.1:tracefs_instance_set_affinity_raw
 libtracefs.so.1:tracefs_instance_set_affinity_set
 libtracefs.so.1:tracefs_instance_set_buffer_size
+libtracefs.so.1:tracefs_instance_tracers
 libtracefs.so.1:tracefs_instances
 libtracefs.so.1:tracefs_instances_walk
 libtracefs.so.1:tracefs_iterate_raw_events
 libtracefs.so.1:tracefs_iterate_stop
 libtracefs.so.1:tracefs_kprobe_alloc
+libtracefs.so.1:tracefs_kprobe_destroy
 libtracefs.so.1:tracefs_kprobe_raw
 libtracefs.so.1:tracefs_kretprobe_alloc
 libtracefs.so.1:tracefs_kretprobe_raw
@@ -147,6 +150,7 @@ libtracefs.so.1:tracefs_synth_get_name
 libtracefs.so.1:tracefs_synth_get_start_hist
 libtracefs.so.1:tracefs_synth_raw_fmt
 libtracefs.so.1:tracefs_synth_save
+libtracefs.so.1:tracefs_synth_set_instance
 libtracefs.so.1:tracefs_synth_show_end_hist
 libtracefs.so.1:tracefs_synth_show_event
 libtracefs.so.1:tracefs_synth_show_start_hist
